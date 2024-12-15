@@ -1,4 +1,4 @@
-package backend;
+
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,11 +17,11 @@ public class Min_Path_Sum_in_Grid{
             return Integer.MAX_VALUE/2;
         }
 
-        int up = f(i - 1, j, grid); // Path from above
-        int left = f(i, j - 1, grid); // Path from the left
+        int up = f(i - 1, j, grid); 
+        int left = f(i, j - 1, grid); 
 
 
-        // Return the minimum path sum to reach (i, j)
+
         return grid.get(i).get(j) + Math.min(up, left);
     }
 

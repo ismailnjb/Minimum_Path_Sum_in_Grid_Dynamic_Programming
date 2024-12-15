@@ -1,4 +1,3 @@
-package backend;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -22,11 +21,11 @@ public class Min_Path_Sum_in_Grid_Memoization {
             return memo.get(i).get(j);
         }
 
-        int up = f(i - 1, j, grid,memo); // Path from above
-        int left = f(i, j - 1, grid,memo); // Path from the left
+        int up = f(i - 1, j, grid,memo); 
+        int left = f(i, j - 1, grid,memo);
 
         memo.get(i).set(j,grid.get(i).get(j) + Math.min(up, left));
-        // Return the minimum path sum to reach (i, j)
+   
         return memo.get(i).get(j);
     }
 
@@ -37,7 +36,7 @@ public class Min_Path_Sum_in_Grid_Memoization {
         for (int i = 0; i < m; i++) {
             List<Integer> row = new ArrayList<>();
             for (int j = 0; j < n; j++) {
-                row.add(-1);  // Initially, no cell is calculated
+                row.add(-1); 
             }
             memo.add(row);
         }
